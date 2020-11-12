@@ -950,7 +950,7 @@ function windowResized() {
     }
     updateSidebarWidth();
     defineWorkingScreenProperties();
-	select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
+	//select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
 }
 
 
@@ -965,7 +965,7 @@ function mouseClicked(){
 						tabOut = -1;
 						updateSidebarWidth();
 					    defineWorkingScreenProperties();
-						select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
+						//select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
 					}
 				}
 			} else if (tabs[tab].name === 'R E S E T'){
@@ -987,7 +987,7 @@ function mouseClicked(){
 				}
 				updateSidebarWidth();
 				defineWorkingScreenProperties();
-				select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
+				//select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
 			}
 		}
 		for (var id=0; id<checks[tab].length; id+=1){
