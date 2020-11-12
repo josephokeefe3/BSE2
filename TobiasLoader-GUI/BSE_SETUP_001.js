@@ -240,15 +240,15 @@ function setup() {
 				}
 				radios[tab].push([]);
 				for (var radio=0; radio<2; radio+=1){
-					if (!radio){radios[tab][2].push(new Radio("Smooth ",tab,false));}
-					else {radios[tab][2].push(new Radio("Stepped ",tab,true));}
+					if (!radio){radios[tab][2].push(new Radio("Smooth ",tab,true));}
+					else {radios[tab][2].push(new Radio("Stepped ",tab,false));}
 				}
 				checks[tab].push([]);
 				checks[tab][0].push(new Check("Price Point ", tab,true));
 				
 				checks[tab].push([]);
-				checks[tab][1].push(new Check("Variable X ", tab,false));
 				checks[tab][1].push(new Check("Variable Y ", tab,false));
+				//checks[tab][1].push(new Check("Variable X ", tab,false));
 				
 				radios[tab].push([]);
 				for (var radio=0; radio<playBackSpeeds.length; radio+=1){//playBackSpeeds

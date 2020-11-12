@@ -481,7 +481,8 @@ function drawLOB(){
 		var maxPrice = 50;
 		var maxPriceDiff = 50;
 		var lobGroup = sortGroupLOB(lob[dml][lobGraphNum]);
-		if (checks[tabNames['Display']][1][0].checked){
+/*
+		if (checks[tabNames['Display']][1][1].checked){ // Variable X
 			for (var i=0; i<2; i+=1){
 				if (abs(lobGroup[i][0][0] - lobGroup[i][lobGroup[i].length-1][0])>maxPriceDiff){
 					maxPriceDiff = abs(lobGroup[i][0][0] - lobGroup[i][lobGroup[i].length-1][0]);
@@ -494,10 +495,11 @@ function drawLOB(){
 			}
 		} 
 		else {
+*/
 			marketValue[dml][lobGraphNum] = 100;
-		}
+// 		}
 		
-		if (checks[tabNames['Display']][1][1].checked){
+		if (checks[tabNames['Display']][1][0].checked){ // Variable Y
 			var maxCF = 0;
 			for (var i=0; i<2; i+=1){
 				if (lob[dml][lobGraphNum][i].length>maxCF){
