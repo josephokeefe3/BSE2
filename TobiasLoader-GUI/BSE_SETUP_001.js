@@ -312,7 +312,7 @@ function setup() {
 	
 	updateSidebarWidth();
     defineWorkingScreenProperties();
-	//select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
+	select('#CopyrightWrapper').style('width',str(workingWidth)+'px');
 	
 // 	drawGUI();
 	
