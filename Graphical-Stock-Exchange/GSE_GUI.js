@@ -499,7 +499,7 @@ function drawLOB(){
 			marketValue[dml][lobGraphNum] = 100;
 // 		}
 		
-		if (checks[tabNames['Display']][1][0].checked){ // Variable Y
+		if (radios[tabNames['Display']][3][1].selected){ // Resize Vol
 			var maxCF = 0;
 			for (var i=0; i<2; i+=1){
 				if (lob[dml][lobGraphNum][i].length>maxCF){
@@ -878,7 +878,7 @@ function drawTimeline(T){
     
     if (playTime && T<lobGraphNums){
 	    for (var radio=0; radio<playBackSpeeds.length; radio+=1){//playBackSpeeds
-			if (radios[tabNames['Display']][3][radio].selected){
+			if (radios[tabNames['Display']][4][radio].selected){
 				playBackSpeed = playBackSpeeds[radio];
 				break;
 			}

@@ -246,13 +246,19 @@ function setup() {
 				checks[tab].push([]);
 				checks[tab][0].push(new Check("Price Point ", tab,true));
 				
-				checks[tab].push([]);
-				checks[tab][1].push(new Check("Variable Y ", tab,false));
+				//checks[tab].push([]);
+				//checks[tab][1].push(new Check("Variable Y ", tab,false));
 				//checks[tab][1].push(new Check("Variable X ", tab,false));
 				
 				radios[tab].push([]);
+				for (var radio=0; radio<2; radio+=1){
+					if (!radio){radios[tab][3].push(new Radio("Fixed ",tab,true));}
+					else {radios[tab][3].push(new Radio("Resize ",tab,false));}
+				}
+				
+				radios[tab].push([]);
 				for (var radio=0; radio<playBackSpeeds.length; radio+=1){//playBackSpeeds
-					radios[tab][3].push(new Radio("x "+str(playBackSpeeds[radio]),tab, playBackSpeeds[radio]===1));
+					radios[tab][4].push(new Radio("x "+str(playBackSpeeds[radio]),tab, playBackSpeeds[radio]===1));
 				}
 				
 				break;
@@ -269,7 +275,7 @@ function setup() {
 		[new Section(1,'N°  Buyers:',0,radios),new Section(1,'Buyer Ratios:',0,slides)],
 		[new Section(2,'N°  Sellers:',0,radios),new Section(2,'Seller Ratios:',0,slides)],
 		[new Section(3,'Timesteps:',0,radios),new Section(3,'Ranges:',0,slides),new Section(3,'Stepmodes:',1,radios),new Section(3,'Timemodes:',2,radios),new Section(3,'Replenishment:',1,slides)],
-		[new Section(4,'Colour:',0,radios),new Section(4,'Orientation:',1,radios),new Section(4,'Style:',2,radios),new Section(4,'LOB Controls:',0,checks),new Section(4,'Axes:',1,checks),new Section(4,'Playback Speed:',3,radios)],
+		[new Section(4,'Colour:',0,radios),new Section(4,'Orientation:',1,radios),new Section(4,'Style:',2,radios),new Section(4,'LOB Controls:',0,checks),new Section(4,'Scale Volume:',3,radios),new Section(4,'Playback Speed:',4,radios)],
 		[new Section(5,'Graph Type:',0,radios)],
 		[]
 	];
