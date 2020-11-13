@@ -279,11 +279,11 @@ function headerText(size1,size2){
 			strokeWeight(1);
 			stroke(C[2].r, C[2].g, C[2].b,50);
 			textFont(fonts[1]);
-			text("Bristol",50,headerHeight/2 + 4);
-			var bristolWordWidth = textWidth("Bristol ");
+			text("Graphical",50,headerHeight/2 + 4);
+			var graphicalWordWidth = textWidth("Graphical ");
 			textFont(fonts[2]);
 			fill(C[6].r, C[6].g, C[6].b,240);
-			text("Stock Exchange",50+2+bristolWordWidth,headerHeight/2 + 4);
+			text("Stock Exchange",50+2+graphicalWordWidth,headerHeight/2 + 4);
 			break;
 		case 1:
 			fill(C[6].r, C[6].g, C[6].b);
@@ -294,24 +294,24 @@ function headerText(size1,size2){
 			noStroke();
 			
 			textFont(fonts[1]);
-			text("B",50,headerHeight/2 + 4);
-			var bristolWordWidth1 = textWidth("B");
+			text("G",50,headerHeight/2 + 4);
+			var graphicalWordWidth1 = textWidth("G");
 			textFont(fonts[2]);
-			text("ristol",50+ bristolWordWidth1,headerHeight/2 + 4);
-			var bristolWordWidth2 = textWidth("ristol");
+			text("raphical",50+ graphicalWordWidth1,headerHeight/2 + 4);
+			var graphicalWordWidth2 = textWidth("raphical");
 			
 			textFont(fonts[1]);
-			text("S",50+2+bristolWordWidth1+bristolWordWidth2+4,headerHeight/2 + 4);
+			text("S",50+2+graphicalWordWidth1+graphicalWordWidth2+4,headerHeight/2 + 4);
 			var stockWordWidth1 = textWidth("S");
 			textFont(fonts[2]);
-			text("tock",50+2+bristolWordWidth1+bristolWordWidth2+stockWordWidth1+4,headerHeight/2 + 4);
+			text("tock",50+2+graphicalWordWidth1+graphicalWordWidth2+stockWordWidth1+4,headerHeight/2 + 4);
 			var stockWordWidth2 = textWidth("tock");
 			
 			textFont(fonts[1]);
-			text("E",50+2+bristolWordWidth1+bristolWordWidth2+stockWordWidth1+stockWordWidth2+8,headerHeight/2 + 4);
+			text("E",50+2+graphicalWordWidth1+graphicalWordWidth2+stockWordWidth1+stockWordWidth2+8,headerHeight/2 + 4);
 			var exchangeWordWidth1 = textWidth("E");
 			textFont(fonts[2]);
-			text("xchange",50+2+bristolWordWidth1+bristolWordWidth2+stockWordWidth1+stockWordWidth2+exchangeWordWidth1+8,headerHeight/2 + 4);
+			text("xchange",50+2+graphicalWordWidth1+graphicalWordWidth2+stockWordWidth1+stockWordWidth2+exchangeWordWidth1+8,headerHeight/2 + 4);
 			break;
 	}
 		
