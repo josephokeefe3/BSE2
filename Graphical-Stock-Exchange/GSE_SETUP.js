@@ -325,6 +325,8 @@ function setup() {
 	
 	background(C[0].r, C[0].g, C[0].b);
 	
+
+//	initializes compute lob to false
 	computeLOB = false;
 	
 	fullLOB = experimentSetUp(lobGraphNums);

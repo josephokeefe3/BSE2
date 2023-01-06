@@ -216,12 +216,19 @@ class Orderbook extends Orderbook_half {
         this.asks = new Orderbook_half('Ask', bse_sys_maxprice);
         this.tape = [];
         this.quote_id = 0;  //unique ID code for each quote accepted onto the book
+        this.mmBid = this.minprice
+        this.mmAsk = this.maxprice
     }
 }
 
 // Exchange's internal orderbook
 
 class Exchange extends Orderbook{
+
+    updateQuote(){
+        this.mmAsk = this.asks.best_price + 5
+        this.mmBid = this.bids.best_price - 5
+    }
 
     add_order(order, verbose){
         // add a quote/order to the exchange and update all internal records; return unique i.d.
@@ -1305,6 +1312,8 @@ function market_session(sess_id, starttime, endtime, trader_spec, order_schedule
 		}
 	    prevTime = time;
         time = time + timestep;
+
+        exchange.updateQuote()
         
         LOBDATAmore.push([exchange.bids.lob_anon, exchange.asks.lob_anon]);
         if (floor(prevTime)!==floor(time)){
