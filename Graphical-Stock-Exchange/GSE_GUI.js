@@ -933,6 +933,7 @@ function drawGUI(){
 
 function draw(){
 	drawGUI();
+	console.log("TEST")
 	if (computeLOB){
 		computeLOB = false;
 		setTimeout(computingLOB, 1000);
