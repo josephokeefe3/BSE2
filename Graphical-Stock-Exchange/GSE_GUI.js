@@ -933,8 +933,9 @@ function drawGUI(){
 
 function draw(){
 	drawGUI();
-	console.log("TEST")
+	console.log("DRAW")
 	if (computeLOB){
+		console.log("COMPUTE LOB")
 		computeLOB = false;
 		setTimeout(computingLOB, 1000);
 		tabs[tabNames['R U N']].name = ' R U N ';
